@@ -11,20 +11,20 @@ public class FirstService {
 	private SecondService secondService;
 	
 	public FirstService() {
-//		secondService = new SecondService();
+		secondService = new SecondService();
 	}
 	
 	// Constructor Injection
-//	@Autowired
-//	public FirstService(SecondService secondService) {
-//		this.secondService = secondService;
-//	}
+	@Autowired
+	public FirstService(SecondService secondService) {
+		this.secondService = secondService;
+	}
 	
 	// Setter Injection
-//	@Autowired
-//	public void setSecondService(SecondService secondService) {
-//		this.secondService = secondService;
-//	}
+	@Autowired
+	public void setSecondService(SecondService secondService) {
+		this.secondService = secondService;
+	}
 	
 	public void doSomething() {
 		secondService.doSomething();

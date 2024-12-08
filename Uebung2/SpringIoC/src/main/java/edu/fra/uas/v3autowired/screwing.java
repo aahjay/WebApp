@@ -6,13 +6,13 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("pleasePaint")
-public class Painting implements Work {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(Painting.class);
+@Qualifier("pleaseScrew")
+public class screwing implements Work {
+    
+    private static final Logger LOGGER = LoggerFactory.getLogger(screwing.class);
 
     @Override
     public void doWork() {
-        LOGGER.info(" --> painting the wall black");
+        LOGGER.info(" --> screwing in screws");
     }
 }

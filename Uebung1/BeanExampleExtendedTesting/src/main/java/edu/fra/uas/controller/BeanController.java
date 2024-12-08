@@ -1,9 +1,12 @@
 package edu.fra.uas.controller;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import edu.fra.uas.service.MessageService;
+
 
 @Component
 public class BeanController {
@@ -12,7 +15,7 @@ public class BeanController {
     private MessageService messageService;
 
     public String putMessage(String message) {
-        messageService.setMessage(" put messgae: " + message);
+        messageService.setMessage(message);
         return messageService.getMessage();
     }
 
