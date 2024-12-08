@@ -11,8 +11,9 @@ import edu.fra.uas.service.NotenService;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -29,8 +30,8 @@ public class NotenController {
         return "index.html";
     }
 
-    @RequestMapping(value = { "/add" }, method = RequestMethod.POST)
-    public String add(@RequestParam("notenwert") double notenwert, @RequestParam("modul") String modul, Model model)
+    @PostMapping({ "/add" })
+    public String add(@RequestParam double notenwert, @RequestParam String modul, Model model)
             throws MissingServletRequestParameterException {
         log.debug("--> add is called");
         Note n = new Note();
@@ -41,7 +42,7 @@ public class NotenController {
         return "add.html";
     }
 
-    @RequestMapping(value = "/calculate", method = RequestMethod.GET)
+    @GetMapping("/calculate")
     public String calculate(Model m) {
         double durchschnitt = notenListe.getDurschnitt();
         m.addAttribute("Durchschnitt", durchschnitt);

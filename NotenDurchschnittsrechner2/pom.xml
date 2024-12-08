@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.fra.uas</groupId>
-	<artifactId>NotenDurschnittsrechner</artifactId>
+	<artifactId>NotenDurchschnittsrechner2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>NotenDurschnittsrechner</name>
-	<description>Berechnet Durchschnitt</description>
+	<name>NotenDurchschnittsrechner2</name>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -34,12 +34,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
 		<dependency>
-    		<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-starter-hateoas</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+    		<groupId>io.springfox</groupId>
+    		<artifactId>springfox-boot-starter</artifactId>
+    		<version>3.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -52,7 +60,16 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<dependency>
+    	<groupId>io.springfox</groupId>
+    	<artifactId>springfox-swagger-ui</artifactId>
+    	<version>3.0.0</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.springdoc</groupId>
+    	<artifactId>springdoc-openapi-ui</artifactId>
+    	<version>2.1.0</version>
+</dependency>
 	<build>
 		<plugins>
 			<plugin>

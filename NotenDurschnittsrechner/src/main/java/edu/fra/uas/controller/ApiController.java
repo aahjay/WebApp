@@ -32,8 +32,8 @@ public class ApiController {
 
     @PostMapping("/note")
     public ResponseEntity<EntityModel<Note>> add(
-            @RequestParam("notenwert") double notenwert,
-            @RequestParam("modul") String modul) {
+            @RequestParam double notenwert,
+            @RequestParam String modul) {
     
         log.debug("--> add is called");
         Note n = new Note();

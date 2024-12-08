@@ -6,6 +6,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "NotenDurchschnittsrechner2Application",
+            "request": "launch",
+            "mainClass": "edu.fra.uas.NotenDurchschnittsrechner2Application"
+        },
+        {
+            "type": "java",
             "name": "NotenDurschnittsrechnerApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.NotenDurschnittsrechnerApplication",
@@ -30,7 +36,8 @@
             "name": "GraphQlClientApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GraphQlClientApplication",
-            "projectName": "GraphQL-Client"
+            "projectName": "GraphQL-Client",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57096 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=GraphQL-Client"
         },
         {
             "type": "java",
@@ -93,7 +100,8 @@
             "name": "GraphQlApplication",
             "request": "launch",
             "mainClass": "edu.fra.uas.GraphQlApplication",
-            "projectName": "GraphQL"
+            "projectName": "GraphQL",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=55792 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=GraphQL"
         },
         {
             "type": "java",
